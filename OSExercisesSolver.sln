@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40418.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSExercisesSolver", "OSExercisesSolver\OSExercisesSolver.csproj", "{E6DD052B-6313-4E03-AA54-975174CD88D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Risolutore Esercizi", "OSExercisesSolver\Risolutore Esercizi.csproj", "{E6DD052B-6313-4E03-AA54-975174CD88D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

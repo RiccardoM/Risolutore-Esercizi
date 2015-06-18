@@ -5,6 +5,11 @@ VisualStudioVersion = 12.0.40418.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Risolutore Esercizi", "OSExercisesSolver\Risolutore Esercizi.csproj", "{E6DD052B-6313-4E03-AA54-975174CD88D7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Eseguibile", "Eseguibile", "{4ED1C7E8-80C2-4EFD-8B42-53313C0ECD8C}"
+	ProjectSection(SolutionItems) = preProject
+		OSExercisesSolver\bin\Release\OSExercisesSolver.exe = OSExercisesSolver\bin\Release\OSExercisesSolver.exe
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

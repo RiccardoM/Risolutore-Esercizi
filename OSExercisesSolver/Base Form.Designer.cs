@@ -35,30 +35,30 @@
             this.pannelloFAT = new System.Windows.Forms.Panel();
             this.pannelloNTFS = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.reservedByteSecNTFS = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.reservedBytePrinNTFS = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.recordDimTextBox = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.GBRadioButtonNTFS = new System.Windows.Forms.RadioButton();
+            this.MBRadioButtonNTFS = new System.Windows.Forms.RadioButton();
+            this.KBRadioButtonNTFS = new System.Windows.Forms.RadioButton();
+            this.BRadioButtonNTFS = new System.Windows.Forms.RadioButton();
+            this.FileDimNTFS = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.dataTakenButtonNTFS = new System.Windows.Forms.Button();
+            this.dataTakeButtonNTFS = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.randGenButtonNTFS = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.solveButtonNTFS = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dataBlockDimNTFS = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.parDimNTFS = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -225,30 +225,30 @@
             // pannelloNTFS
             // 
             this.pannelloNTFS.Controls.Add(this.label27);
-            this.pannelloNTFS.Controls.Add(this.textBox4);
+            this.pannelloNTFS.Controls.Add(this.reservedByteSecNTFS);
             this.pannelloNTFS.Controls.Add(this.label28);
             this.pannelloNTFS.Controls.Add(this.label25);
-            this.pannelloNTFS.Controls.Add(this.textBox3);
+            this.pannelloNTFS.Controls.Add(this.reservedBytePrinNTFS);
             this.pannelloNTFS.Controls.Add(this.label26);
             this.pannelloNTFS.Controls.Add(this.label24);
             this.pannelloNTFS.Controls.Add(this.recordDimTextBox);
             this.pannelloNTFS.Controls.Add(this.label23);
-            this.pannelloNTFS.Controls.Add(this.radioButton1);
-            this.pannelloNTFS.Controls.Add(this.radioButton2);
-            this.pannelloNTFS.Controls.Add(this.radioButton3);
-            this.pannelloNTFS.Controls.Add(this.radioButton4);
-            this.pannelloNTFS.Controls.Add(this.textBox1);
+            this.pannelloNTFS.Controls.Add(this.GBRadioButtonNTFS);
+            this.pannelloNTFS.Controls.Add(this.MBRadioButtonNTFS);
+            this.pannelloNTFS.Controls.Add(this.KBRadioButtonNTFS);
+            this.pannelloNTFS.Controls.Add(this.BRadioButtonNTFS);
+            this.pannelloNTFS.Controls.Add(this.FileDimNTFS);
             this.pannelloNTFS.Controls.Add(this.label13);
-            this.pannelloNTFS.Controls.Add(this.dataTakenButtonNTFS);
+            this.pannelloNTFS.Controls.Add(this.dataTakeButtonNTFS);
             this.pannelloNTFS.Controls.Add(this.label15);
             this.pannelloNTFS.Controls.Add(this.randGenButtonNTFS);
             this.pannelloNTFS.Controls.Add(this.label16);
             this.pannelloNTFS.Controls.Add(this.label17);
             this.pannelloNTFS.Controls.Add(this.solveButtonNTFS);
-            this.pannelloNTFS.Controls.Add(this.comboBox1);
+            this.pannelloNTFS.Controls.Add(this.dataBlockDimNTFS);
             this.pannelloNTFS.Controls.Add(this.label18);
             this.pannelloNTFS.Controls.Add(this.label19);
-            this.pannelloNTFS.Controls.Add(this.textBox2);
+            this.pannelloNTFS.Controls.Add(this.parDimNTFS);
             this.pannelloNTFS.Controls.Add(this.label20);
             this.pannelloNTFS.Controls.Add(this.label21);
             this.pannelloNTFS.Controls.Add(this.label22);
@@ -268,14 +268,15 @@
             this.label27.TabIndex = 95;
             this.label27.Text = "B";
             // 
-            // textBox4
+            // reservedByteSecNTFS
             // 
-            this.textBox4.Location = new System.Drawing.Point(220, 219);
-            this.textBox4.MaxLength = 3;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(40, 20);
-            this.textBox4.TabIndex = 94;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.reservedByteSecNTFS.Location = new System.Drawing.Point(220, 219);
+            this.reservedByteSecNTFS.MaxLength = 3;
+            this.reservedByteSecNTFS.Name = "reservedByteSecNTFS";
+            this.reservedByteSecNTFS.Size = new System.Drawing.Size(40, 20);
+            this.reservedByteSecNTFS.TabIndex = 94;
+            this.reservedByteSecNTFS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.reservedByteSecNTFS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.reservedByteSecNTFS_KeyPress);
             // 
             // label28
             // 
@@ -295,14 +296,15 @@
             this.label25.TabIndex = 92;
             this.label25.Text = "B";
             // 
-            // textBox3
+            // reservedBytePrinNTFS
             // 
-            this.textBox3.Location = new System.Drawing.Point(220, 191);
-            this.textBox3.MaxLength = 3;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(40, 20);
-            this.textBox3.TabIndex = 91;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.reservedBytePrinNTFS.Location = new System.Drawing.Point(220, 191);
+            this.reservedBytePrinNTFS.MaxLength = 3;
+            this.reservedBytePrinNTFS.Name = "reservedBytePrinNTFS";
+            this.reservedBytePrinNTFS.Size = new System.Drawing.Size(40, 20);
+            this.reservedBytePrinNTFS.TabIndex = 91;
+            this.reservedBytePrinNTFS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.reservedBytePrinNTFS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.reservedBytePrinNTFS_KeyPress);
             // 
             // label26
             // 
@@ -330,6 +332,7 @@
             this.recordDimTextBox.Size = new System.Drawing.Size(40, 20);
             this.recordDimTextBox.TabIndex = 88;
             this.recordDimTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.recordDimTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.recordDimTextBox_KeyPress);
             // 
             // label23
             // 
@@ -340,58 +343,58 @@
             this.label23.TabIndex = 87;
             this.label23.Text = "Ampiezza record:";
             // 
-            // radioButton1
+            // GBRadioButtonNTFS
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(399, 128);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(40, 17);
-            this.radioButton1.TabIndex = 86;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "GB";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.GBRadioButtonNTFS.AutoSize = true;
+            this.GBRadioButtonNTFS.Location = new System.Drawing.Point(399, 128);
+            this.GBRadioButtonNTFS.Name = "GBRadioButtonNTFS";
+            this.GBRadioButtonNTFS.Size = new System.Drawing.Size(40, 17);
+            this.GBRadioButtonNTFS.TabIndex = 86;
+            this.GBRadioButtonNTFS.TabStop = true;
+            this.GBRadioButtonNTFS.Text = "GB";
+            this.GBRadioButtonNTFS.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // MBRadioButtonNTFS
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(352, 128);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(41, 17);
-            this.radioButton2.TabIndex = 85;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "MB";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.MBRadioButtonNTFS.AutoSize = true;
+            this.MBRadioButtonNTFS.Location = new System.Drawing.Point(352, 128);
+            this.MBRadioButtonNTFS.Name = "MBRadioButtonNTFS";
+            this.MBRadioButtonNTFS.Size = new System.Drawing.Size(41, 17);
+            this.MBRadioButtonNTFS.TabIndex = 85;
+            this.MBRadioButtonNTFS.TabStop = true;
+            this.MBRadioButtonNTFS.Text = "MB";
+            this.MBRadioButtonNTFS.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // KBRadioButtonNTFS
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(307, 128);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(39, 17);
-            this.radioButton3.TabIndex = 84;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "KB";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.KBRadioButtonNTFS.AutoSize = true;
+            this.KBRadioButtonNTFS.Location = new System.Drawing.Point(307, 128);
+            this.KBRadioButtonNTFS.Name = "KBRadioButtonNTFS";
+            this.KBRadioButtonNTFS.Size = new System.Drawing.Size(39, 17);
+            this.KBRadioButtonNTFS.TabIndex = 84;
+            this.KBRadioButtonNTFS.TabStop = true;
+            this.KBRadioButtonNTFS.Text = "KB";
+            this.KBRadioButtonNTFS.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // BRadioButtonNTFS
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(269, 127);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(32, 17);
-            this.radioButton4.TabIndex = 83;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "B";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.BRadioButtonNTFS.AutoSize = true;
+            this.BRadioButtonNTFS.Location = new System.Drawing.Point(269, 127);
+            this.BRadioButtonNTFS.Name = "BRadioButtonNTFS";
+            this.BRadioButtonNTFS.Size = new System.Drawing.Size(32, 17);
+            this.BRadioButtonNTFS.TabIndex = 83;
+            this.BRadioButtonNTFS.TabStop = true;
+            this.BRadioButtonNTFS.Text = "B";
+            this.BRadioButtonNTFS.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // FileDimNTFS
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 126);
-            this.textBox1.MaxLength = 3;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 20);
-            this.textBox1.TabIndex = 82;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.FileDimNTFS.Location = new System.Drawing.Point(136, 126);
+            this.FileDimNTFS.MaxLength = 3;
+            this.FileDimNTFS.Name = "FileDimNTFS";
+            this.FileDimNTFS.Size = new System.Drawing.Size(124, 20);
+            this.FileDimNTFS.TabIndex = 82;
+            this.FileDimNTFS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label13
             // 
@@ -402,14 +405,14 @@
             this.label13.TabIndex = 81;
             this.label13.Text = "Dimensione file:";
             // 
-            // dataTakenButtonNTFS
+            // dataTakeButtonNTFS
             // 
-            this.dataTakenButtonNTFS.Location = new System.Drawing.Point(12, 269);
-            this.dataTakenButtonNTFS.Name = "dataTakenButtonNTFS";
-            this.dataTakenButtonNTFS.Size = new System.Drawing.Size(448, 46);
-            this.dataTakenButtonNTFS.TabIndex = 80;
-            this.dataTakenButtonNTFS.Text = "Preleva dati";
-            this.dataTakenButtonNTFS.UseVisualStyleBackColor = true;
+            this.dataTakeButtonNTFS.Location = new System.Drawing.Point(12, 269);
+            this.dataTakeButtonNTFS.Name = "dataTakeButtonNTFS";
+            this.dataTakeButtonNTFS.Size = new System.Drawing.Size(448, 46);
+            this.dataTakeButtonNTFS.TabIndex = 80;
+            this.dataTakeButtonNTFS.Text = "Preleva dati";
+            this.dataTakeButtonNTFS.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
@@ -459,20 +462,20 @@
             this.solveButtonNTFS.Text = "Risolvi esercizio";
             this.solveButtonNTFS.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // dataBlockDimNTFS
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.dataBlockDimNTFS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dataBlockDimNTFS.FormattingEnabled = true;
+            this.dataBlockDimNTFS.Items.AddRange(new object[] {
             "1",
             "2",
             "4"});
-            this.comboBox1.Location = new System.Drawing.Point(220, 89);
-            this.comboBox1.MaxLength = 1;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox1.Size = new System.Drawing.Size(40, 21);
-            this.comboBox1.TabIndex = 74;
+            this.dataBlockDimNTFS.Location = new System.Drawing.Point(220, 89);
+            this.dataBlockDimNTFS.MaxLength = 1;
+            this.dataBlockDimNTFS.Name = "dataBlockDimNTFS";
+            this.dataBlockDimNTFS.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataBlockDimNTFS.Size = new System.Drawing.Size(40, 21);
+            this.dataBlockDimNTFS.TabIndex = 74;
             // 
             // label18
             // 
@@ -492,14 +495,14 @@
             this.label19.TabIndex = 72;
             this.label19.Text = "Ampiezza blocco dati:";
             // 
-            // textBox2
+            // parDimNTFS
             // 
-            this.textBox2.Location = new System.Drawing.Point(220, 54);
-            this.textBox2.MaxLength = 3;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(40, 20);
-            this.textBox2.TabIndex = 71;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.parDimNTFS.Location = new System.Drawing.Point(220, 54);
+            this.parDimNTFS.MaxLength = 3;
+            this.parDimNTFS.Name = "parDimNTFS";
+            this.parDimNTFS.Size = new System.Drawing.Size(40, 20);
+            this.parDimNTFS.TabIndex = 71;
+            this.parDimNTFS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label20
             // 
@@ -1000,30 +1003,30 @@
         private System.Windows.Forms.TextBox dimFileTextBoxFat;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel pannelloNTFS;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton GBRadioButtonNTFS;
+        private System.Windows.Forms.RadioButton MBRadioButtonNTFS;
+        private System.Windows.Forms.RadioButton KBRadioButtonNTFS;
+        private System.Windows.Forms.RadioButton BRadioButtonNTFS;
+        private System.Windows.Forms.TextBox FileDimNTFS;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button dataTakenButtonNTFS;
+        private System.Windows.Forms.Button dataTakeButtonNTFS;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button randGenButtonNTFS;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button solveButtonNTFS;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox dataBlockDimNTFS;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox parDimNTFS;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox reservedByteSecNTFS;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox reservedBytePrinNTFS;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox recordDimTextBox;

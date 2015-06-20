@@ -31,13 +31,22 @@ namespace OSExercisesSolver {
                 
                 pannelloExt2fs.Visible = true;
                 pannelloFAT.Visible = false;
+                pannelloNTFS.Visible = false;
 
             }
 
             private void FATToolStripMenuItem_Click(object sender, EventArgs e){
 
                 pannelloExt2fs.Visible = true;
+                pannelloNTFS.Visible = false;
                 pannelloFAT.Visible = true;
+
+            }
+
+            private void nTFSToolStripMenuItem_Click(object sender, EventArgs e) {
+                pannelloExt2fs.Visible = true;
+                pannelloFAT.Visible = true;
+                pannelloNTFS.Visible = true;
 
             }
 
@@ -259,6 +268,8 @@ namespace OSExercisesSolver {
 
 
             }
+
+            
 
             
 

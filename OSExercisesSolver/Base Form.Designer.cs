@@ -413,6 +413,7 @@
             this.dataTakeButtonNTFS.TabIndex = 80;
             this.dataTakeButtonNTFS.Text = "Preleva dati";
             this.dataTakeButtonNTFS.UseVisualStyleBackColor = true;
+            this.dataTakeButtonNTFS.Click += new System.EventHandler(this.dataTakeButtonNTFS_Click);
             // 
             // label15
             // 
@@ -432,6 +433,7 @@
             this.randGenButtonNTFS.TabIndex = 78;
             this.randGenButtonNTFS.Text = "Genera dati casuali";
             this.randGenButtonNTFS.UseVisualStyleBackColor = true;
+            this.randGenButtonNTFS.Click += new System.EventHandler(this.randGenButtonNTFS_Click);
             // 
             // label16
             // 
@@ -461,6 +463,7 @@
             this.solveButtonNTFS.TabIndex = 75;
             this.solveButtonNTFS.Text = "Risolvi esercizio";
             this.solveButtonNTFS.UseVisualStyleBackColor = true;
+            this.solveButtonNTFS.Click += new System.EventHandler(this.solveButtonNTFS_Click);
             // 
             // dataBlockDimNTFS
             // 

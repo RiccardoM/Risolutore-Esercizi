@@ -283,15 +283,36 @@ namespace OSExercisesSolver {
 
             
 
-            
 
-            
-            
 
-            
+            // ####################################################################
+            // #####################      ESERCIZIO FAT        ####################
+            // ####################################################################
 
-            
+            // ####################################
+            // #######  Genera dati random  #######
+            // ####################################
 
+            private void randGenButtonNTFS_Click(object sender, EventArgs e) {
+
+            }
+
+            // ####################################
+            // #####  Preleva dati da Ext2fs  #####
+            // ####################################
+
+            private void dataTakeButtonNTFS_Click(object sender, EventArgs e) {
+
+            }
+
+
+            // ####################################
+            // ############  Risolvi   ############
+            // ####################################
+
+            private void solveButtonNTFS_Click(object sender, EventArgs e) {
+
+            }
             
 
 

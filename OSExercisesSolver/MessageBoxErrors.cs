@@ -27,7 +27,7 @@ namespace CheckErrors {
         }
 
 
-        // Controlla che siano inseriti tutti i dati negli esercizi Ext2fs
+        // Controlla che siano inseriti tutti i dati negli esercizi Fat
         public bool checkValidationFat( string dimParTextBoxFat, string dataBlockComboFat, string dimFileTextBoxFat, bool BRadioButtonFat,
                                         bool KBRadioButtonFat, bool MBRadioButtonFat, bool GBRadioButtonFat ) {
 
@@ -43,6 +43,21 @@ namespace CheckErrors {
 
         }
 
+        // Controlla che siano inseriti tutti i dati negli esercizi NTFS
+        public bool checkValidationNTFS(string dimParTextBoxFat, string dataBlockComboFat, string dimFileTextBoxFat, bool BRadioButtonFat,
+                                        bool KBRadioButtonFat, bool MBRadioButtonFat, bool GBRadioButtonFat) {
+
+            if (dimParTextBoxFat != "" && dimParTextBoxFat != "0" && dataBlockComboFat != "" && dataBlockComboFat != "0" && dimFileTextBoxFat != "" &&
+                (BRadioButtonFat || KBRadioButtonFat || MBRadioButtonFat || GBRadioButtonFat)) {
+
+                return true;
+
+            }
+
+            MessageBox.Show("Controlla di aver inserito correttamente tutti i dati", "Errore");
+            return false;
+
+        }
 
     }
 

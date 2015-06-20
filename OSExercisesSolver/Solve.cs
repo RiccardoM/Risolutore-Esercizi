@@ -281,4 +281,94 @@ namespace SolveExercises {
 
     }
 
+    class SolveNTFS {
+
+        // Risolve l'esercizio
+        public void Solve(int dimParFat, int dataBlockDimFat, double dimFileFat, string selectedFat) {
+
+            // #############################
+            // ####     PREPARAZIONE    ####
+            // #############################
+
+            // Test MessageBox
+            // MessageBox.Show(Math.Log(dimParFat, 2).ToString() + " " + Math.Log(dataBlockDimFat,2).ToString() + " " + Math.Log(dimFileFat, 2).ToString() + " " + selectedFat.ToString());
+
+            //Converti tutti i valori in double
+
+            double dimParFatDoub = Convert.ToDouble(Math.Pow(2, Math.Log(dimParFat, 2) + 30));
+            double dimBlockFatDoub = Convert.ToDouble(Math.Pow(2, Math.Log(dataBlockDimFat, 2) + 10));
+            double dimFileFatDoub = dimFileFat;
+            int log = Convert.ToInt32(Math.Log(dimFileFat, 2));
+
+
+
+            string selected = selectedFat.ToString();
+
+            if (selected == "B") {
+                dimFileFatDoub = dimFileFat;
+
+            }
+
+            else if (selected == "KB") {
+                dimFileFatDoub = Math.Pow(2, (log + 10));
+            }
+
+            else if (selected == "MB") {
+                dimFileFatDoub = Math.Pow(2, (log + 20));
+            }
+
+            else if (selected == "GB") {
+                dimFileFatDoub = Math.Pow(2, (log + 30));
+            }
+
+
+
+
+            // #############################
+            // ####     ELABORAZIONE    ####
+            // #############################
+
+            // Calcolo numero di blocchi dati necessari per costruire la partizione
+            double numBlockParFat = Convert.ToDouble(Math.Pow(2, (Math.Log(dimParFat, 2) + 30 - Math.Log(dataBlockDimFat, 2) - 10)));
+
+            // Calcolo numero di bit necessari per indirizzare tutti i blocchi (arrotondando per eccesso al multiplo di 8 più vicino)
+            int numBitFat = 0;
+
+            if (Math.Log(numBlockParFat, 2) % 8 > 0) {
+                int div = Convert.ToInt32((Math.Log(numBlockParFat, 2) / 8) + 1);
+                numBitFat = div * 8;
+            }
+
+            else {
+                numBitFat = Convert.ToInt32(Math.Log(numBlockParFat, 2));
+            }
+
+            // Calcolo la dimensione della FAT in B
+            double dimFat = (numBlockParFat * (numBitFat / 8));
+
+
+            // Calcolo rapporto inflattivo
+            double rappDoub = Math.Round((dimFat / dimFileFatDoub) * 100, 2);
+
+
+
+            // #######################
+            // #####    OUTPUT   #####
+            // #######################
+
+            MessageBox.Show("Dimensione partizione  = 2^ " + (Math.Log(dimParFatDoub, 2)).ToString() + " B" + "\n" +
+                            "Dimensione blocco dati = 2^ " + (Math.Log(dimBlockFatDoub, 2)).ToString() + " B" + "\n" +
+                            "Numero di blocchi nella partizione =  2^ " + (Math.Log(numBlockParFat, 2)).ToString() + "\n" +
+                            "Numero di bit necessari per indirizzare tali blocchi = " + numBitFat.ToString() + " = " + (numBitFat / 8).ToString() + " B" + "\n" +
+                            "Dimensione della struttira per indirizzare tale file = " + (dimFat).ToString() + " B" + "\n" +
+                            "Dimensione del file = " + dimFileFatDoub.ToString() + " B" + "\n" +
+                            "Rapporto inflattivo = " + (rappDoub).ToString() + " %" + "\n"
+
+                           );
+
+
+        }
+
+    }
+
 }

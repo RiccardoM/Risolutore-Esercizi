@@ -33,6 +33,35 @@
             this.Changelog = new System.Windows.Forms.Label();
             this.pannelloExt2fs = new System.Windows.Forms.Panel();
             this.pannelloFAT = new System.Windows.Forms.Panel();
+            this.pannelloNTFS = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.recordDimTextBox = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dataTakenButtonNTFS = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.randGenButtonNTFS = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.solveButtonNTFS = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.GBRadioButtonFat = new System.Windows.Forms.RadioButton();
             this.MBRadioButtonFat = new System.Windows.Forms.RadioButton();
             this.KBRadioButtonFat = new System.Windows.Forms.RadioButton();
@@ -72,26 +101,6 @@
             this.labelInDimPar = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Titolo = new System.Windows.Forms.Label();
-            this.pannelloNTFS = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.pannelloExt2fs.SuspendLayout();
             this.pannelloFAT.SuspendLayout();
@@ -213,6 +222,313 @@
             this.pannelloFAT.TabIndex = 23;
             this.pannelloFAT.Visible = false;
             // 
+            // pannelloNTFS
+            // 
+            this.pannelloNTFS.Controls.Add(this.label27);
+            this.pannelloNTFS.Controls.Add(this.textBox4);
+            this.pannelloNTFS.Controls.Add(this.label28);
+            this.pannelloNTFS.Controls.Add(this.label25);
+            this.pannelloNTFS.Controls.Add(this.textBox3);
+            this.pannelloNTFS.Controls.Add(this.label26);
+            this.pannelloNTFS.Controls.Add(this.label24);
+            this.pannelloNTFS.Controls.Add(this.recordDimTextBox);
+            this.pannelloNTFS.Controls.Add(this.label23);
+            this.pannelloNTFS.Controls.Add(this.radioButton1);
+            this.pannelloNTFS.Controls.Add(this.radioButton2);
+            this.pannelloNTFS.Controls.Add(this.radioButton3);
+            this.pannelloNTFS.Controls.Add(this.radioButton4);
+            this.pannelloNTFS.Controls.Add(this.textBox1);
+            this.pannelloNTFS.Controls.Add(this.label13);
+            this.pannelloNTFS.Controls.Add(this.dataTakenButtonNTFS);
+            this.pannelloNTFS.Controls.Add(this.label15);
+            this.pannelloNTFS.Controls.Add(this.randGenButtonNTFS);
+            this.pannelloNTFS.Controls.Add(this.label16);
+            this.pannelloNTFS.Controls.Add(this.label17);
+            this.pannelloNTFS.Controls.Add(this.solveButtonNTFS);
+            this.pannelloNTFS.Controls.Add(this.comboBox1);
+            this.pannelloNTFS.Controls.Add(this.label18);
+            this.pannelloNTFS.Controls.Add(this.label19);
+            this.pannelloNTFS.Controls.Add(this.textBox2);
+            this.pannelloNTFS.Controls.Add(this.label20);
+            this.pannelloNTFS.Controls.Add(this.label21);
+            this.pannelloNTFS.Controls.Add(this.label22);
+            this.pannelloNTFS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pannelloNTFS.Location = new System.Drawing.Point(0, 0);
+            this.pannelloNTFS.Name = "pannelloNTFS";
+            this.pannelloNTFS.Size = new System.Drawing.Size(472, 484);
+            this.pannelloNTFS.TabIndex = 68;
+            this.pannelloNTFS.Visible = false;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(266, 222);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(14, 13);
+            this.label27.TabIndex = 95;
+            this.label27.Text = "B";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(220, 219);
+            this.textBox4.MaxLength = 3;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(40, 20);
+            this.textBox4.TabIndex = 94;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(23, 222);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(185, 13);
+            this.label28.TabIndex = 93;
+            this.label28.Text = "Byre riservati nei record di estensione:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(266, 194);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(14, 13);
+            this.label25.TabIndex = 92;
+            this.label25.Text = "B";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(220, 191);
+            this.textBox3.MaxLength = 3;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(40, 20);
+            this.textBox3.TabIndex = 91;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(23, 194);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(168, 13);
+            this.label26.TabIndex = 90;
+            this.label26.Text = "Byte riservati nel record principale:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(266, 162);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(14, 13);
+            this.label24.TabIndex = 89;
+            this.label24.Text = "B";
+            // 
+            // recordDimTextBox
+            // 
+            this.recordDimTextBox.Location = new System.Drawing.Point(220, 159);
+            this.recordDimTextBox.MaxLength = 3;
+            this.recordDimTextBox.Name = "recordDimTextBox";
+            this.recordDimTextBox.Size = new System.Drawing.Size(40, 20);
+            this.recordDimTextBox.TabIndex = 88;
+            this.recordDimTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(23, 162);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(88, 13);
+            this.label23.TabIndex = 87;
+            this.label23.Text = "Ampiezza record:";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(399, 128);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(40, 17);
+            this.radioButton1.TabIndex = 86;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "GB";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(352, 128);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(41, 17);
+            this.radioButton2.TabIndex = 85;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "MB";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(307, 128);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(39, 17);
+            this.radioButton3.TabIndex = 84;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "KB";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(269, 127);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(32, 17);
+            this.radioButton4.TabIndex = 83;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "B";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(136, 126);
+            this.textBox1.MaxLength = 3;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(124, 20);
+            this.textBox1.TabIndex = 82;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(23, 129);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(81, 13);
+            this.label13.TabIndex = 81;
+            this.label13.Text = "Dimensione file:";
+            // 
+            // dataTakenButtonNTFS
+            // 
+            this.dataTakenButtonNTFS.Location = new System.Drawing.Point(12, 269);
+            this.dataTakenButtonNTFS.Name = "dataTakenButtonNTFS";
+            this.dataTakenButtonNTFS.Size = new System.Drawing.Size(448, 46);
+            this.dataTakenButtonNTFS.TabIndex = 80;
+            this.dataTakenButtonNTFS.Text = "Preleva dati";
+            this.dataTakenButtonNTFS.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(12, 250);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(225, 16);
+            this.label15.TabIndex = 79;
+            this.label15.Text = "1. B.  Preleva dati da esercizio Ext2fs";
+            // 
+            // randGenButtonNTFS
+            // 
+            this.randGenButtonNTFS.Location = new System.Drawing.Point(12, 348);
+            this.randGenButtonNTFS.Name = "randGenButtonNTFS";
+            this.randGenButtonNTFS.Size = new System.Drawing.Size(448, 46);
+            this.randGenButtonNTFS.TabIndex = 78;
+            this.randGenButtonNTFS.Text = "Genera dati casuali";
+            this.randGenButtonNTFS.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(12, 407);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(122, 16);
+            this.label16.TabIndex = 77;
+            this.label16.Text = "2. Risolvi l\'eserczio";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(12, 329);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(241, 16);
+            this.label17.TabIndex = 76;
+            this.label17.Text = "1. C.  Genera a caso dati di un esercizio";
+            // 
+            // solveButtonNTFS
+            // 
+            this.solveButtonNTFS.Location = new System.Drawing.Point(12, 426);
+            this.solveButtonNTFS.Name = "solveButtonNTFS";
+            this.solveButtonNTFS.Size = new System.Drawing.Size(448, 46);
+            this.solveButtonNTFS.TabIndex = 75;
+            this.solveButtonNTFS.Text = "Risolvi esercizio";
+            this.solveButtonNTFS.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "4"});
+            this.comboBox1.Location = new System.Drawing.Point(220, 89);
+            this.comboBox1.MaxLength = 1;
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox1.Size = new System.Drawing.Size(40, 21);
+            this.comboBox1.TabIndex = 74;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(266, 92);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(21, 13);
+            this.label18.TabIndex = 73;
+            this.label18.Text = "KB";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(23, 92);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(110, 13);
+            this.label19.TabIndex = 72;
+            this.label19.Text = "Ampiezza blocco dati:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(220, 54);
+            this.textBox2.MaxLength = 3;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(40, 20);
+            this.textBox2.TabIndex = 71;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(9, 25);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(194, 16);
+            this.label20.TabIndex = 70;
+            this.label20.Text = "1. A.  Inserici dati di un esercizio";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(266, 57);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(22, 13);
+            this.label21.TabIndex = 69;
+            this.label21.Text = "GB";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(23, 57);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(103, 13);
+            this.label22.TabIndex = 68;
+            this.label22.Text = "Ampiezza partizione:";
+            // 
             // GBRadioButtonFat
             // 
             this.GBRadioButtonFat.AutoSize = true;
@@ -277,7 +593,7 @@
             // 
             // dataTakeButtonFat
             // 
-            this.dataTakeButtonFat.Location = new System.Drawing.Point(12, 265);
+            this.dataTakeButtonFat.Location = new System.Drawing.Point(12, 269);
             this.dataTakeButtonFat.Name = "dataTakeButtonFat";
             this.dataTakeButtonFat.Size = new System.Drawing.Size(448, 46);
             this.dataTakeButtonFat.TabIndex = 60;
@@ -289,7 +605,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 246);
+            this.label5.Location = new System.Drawing.Point(12, 250);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(225, 16);
             this.label5.TabIndex = 59;
@@ -608,223 +924,6 @@
             this.Titolo.Text = "Risolutore di esercizi di Sistemi Operativi";
             this.Titolo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pannelloNTFS
-            // 
-            this.pannelloNTFS.Controls.Add(this.radioButton1);
-            this.pannelloNTFS.Controls.Add(this.radioButton2);
-            this.pannelloNTFS.Controls.Add(this.radioButton3);
-            this.pannelloNTFS.Controls.Add(this.radioButton4);
-            this.pannelloNTFS.Controls.Add(this.textBox1);
-            this.pannelloNTFS.Controls.Add(this.label13);
-            this.pannelloNTFS.Controls.Add(this.button1);
-            this.pannelloNTFS.Controls.Add(this.label15);
-            this.pannelloNTFS.Controls.Add(this.button2);
-            this.pannelloNTFS.Controls.Add(this.label16);
-            this.pannelloNTFS.Controls.Add(this.label17);
-            this.pannelloNTFS.Controls.Add(this.button3);
-            this.pannelloNTFS.Controls.Add(this.comboBox1);
-            this.pannelloNTFS.Controls.Add(this.label18);
-            this.pannelloNTFS.Controls.Add(this.label19);
-            this.pannelloNTFS.Controls.Add(this.textBox2);
-            this.pannelloNTFS.Controls.Add(this.label20);
-            this.pannelloNTFS.Controls.Add(this.label21);
-            this.pannelloNTFS.Controls.Add(this.label22);
-            this.pannelloNTFS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pannelloNTFS.Location = new System.Drawing.Point(0, 0);
-            this.pannelloNTFS.Name = "pannelloNTFS";
-            this.pannelloNTFS.Size = new System.Drawing.Size(472, 484);
-            this.pannelloNTFS.TabIndex = 68;
-            this.pannelloNTFS.Visible = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(399, 128);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(40, 17);
-            this.radioButton1.TabIndex = 86;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "GB";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(352, 128);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(41, 17);
-            this.radioButton2.TabIndex = 85;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "MB";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(307, 128);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(39, 17);
-            this.radioButton3.TabIndex = 84;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "KB";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(269, 127);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(32, 17);
-            this.radioButton4.TabIndex = 83;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "B";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(136, 126);
-            this.textBox1.MaxLength = 3;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 20);
-            this.textBox1.TabIndex = 82;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(23, 129);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 13);
-            this.label13.TabIndex = 81;
-            this.label13.Text = "Dimensione file:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 265);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(448, 46);
-            this.button1.TabIndex = 80;
-            this.button1.Text = "PUPPA";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(12, 246);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(225, 16);
-            this.label15.TabIndex = 79;
-            this.label15.Text = "1. B.  Preleva dati da esercizio Ext2fs";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(12, 348);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(448, 46);
-            this.button2.TabIndex = 78;
-            this.button2.Text = "Genera dati casuali";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(12, 407);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(122, 16);
-            this.label16.TabIndex = 77;
-            this.label16.Text = "2. Risolvi l\'eserczio";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(12, 329);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(241, 16);
-            this.label17.TabIndex = 76;
-            this.label17.Text = "1. C.  Genera a caso dati di un esercizio";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(12, 426);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(448, 46);
-            this.button3.TabIndex = 75;
-            this.button3.Text = "Risolvi esercizio";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "4"});
-            this.comboBox1.Location = new System.Drawing.Point(220, 89);
-            this.comboBox1.MaxLength = 1;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox1.Size = new System.Drawing.Size(40, 21);
-            this.comboBox1.TabIndex = 74;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(266, 92);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(21, 13);
-            this.label18.TabIndex = 73;
-            this.label18.Text = "KB";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(23, 92);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(110, 13);
-            this.label19.TabIndex = 72;
-            this.label19.Text = "Ampiezza blocco dati:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(220, 54);
-            this.textBox2.MaxLength = 3;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(40, 20);
-            this.textBox2.TabIndex = 71;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(9, 25);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(194, 16);
-            this.label20.TabIndex = 70;
-            this.label20.Text = "1. A.  Inserici dati di un esercizio";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(266, 57);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(22, 13);
-            this.label21.TabIndex = 69;
-            this.label21.Text = "GB";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(23, 57);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(103, 13);
-            this.label22.TabIndex = 68;
-            this.label22.Text = "Ampiezza partizione:";
-            // 
             // Risolutore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -907,12 +1006,12 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button dataTakenButtonNTFS;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button randGenButtonNTFS;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button solveButtonNTFS;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
@@ -920,6 +1019,15 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox recordDimTextBox;
+        private System.Windows.Forms.Label label23;
         
     }
 }

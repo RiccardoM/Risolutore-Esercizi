@@ -268,7 +268,6 @@ namespace OSExercisesSolver {
 
 
             }
-
             
 
             

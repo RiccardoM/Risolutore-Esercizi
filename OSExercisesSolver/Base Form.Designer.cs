@@ -428,12 +428,11 @@
             // 
             // randGenButtonNTFS
             // 
-            this.randGenButtonNTFS.Enabled = false;
             this.randGenButtonNTFS.Location = new System.Drawing.Point(12, 348);
             this.randGenButtonNTFS.Name = "randGenButtonNTFS";
             this.randGenButtonNTFS.Size = new System.Drawing.Size(448, 46);
             this.randGenButtonNTFS.TabIndex = 78;
-            this.randGenButtonNTFS.Text = "Genera dati casuali (In arrivo)";
+            this.randGenButtonNTFS.Text = "Genera dati casuali";
             this.randGenButtonNTFS.UseVisualStyleBackColor = true;
             this.randGenButtonNTFS.Click += new System.EventHandler(this.randGenButtonNTFS_Click);
             // 

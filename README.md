@@ -1,11 +1,11 @@
 ### Informazioni generali
 Questa piccola applicazione permette di risolvere, oltre che generare dati casuali, gli esercizi inerenti i File System Ext2fs, FAT ed NTFS che vengono trattati nel corso di Sistemi
-Operativi dell'Università di Informatica dell'Ateneo di Padova.
+Operativi dell'UniversitÃ  di Informatica dell'Ateneo di Padova.
 Tutti gli esercizi vengono svolti seguendo i metodi illustrati in [QUESTO FILE](http://bit.ly/1RvNMHf).
 
 Creato da Riccardo Montagnin
 
-© Riccardo Montagnin - 2015
+Â© Riccardo Montagnin - 2015
 
 ### Changelog
 #### Versione 1.0.0
@@ -28,14 +28,9 @@ Creato da Riccardo Montagnin
 + Aggiunto menu per risolvere gli esercizi inerenti il File System NTFS
 
 
-
-### Bug conosciuti
-+ Provare a risolvere un esercizio senza aver completato almeno un campo risulta nel lancio di un'eccezione
-+ Provare a prelevare i dati dal pannello Et2fs senza aver completato quest'ultimo risulta nel lancio di un'eccezione
-
 ### Da fare
 #### Prossima versione (1.0.6)
 + Generatore casuale di dati per l'esercizio NTFS
 
 #### In futuro
-+ Riscrittura totale del codice per una maggiore semplicità di lettura e compresione
++ Riscrittura totale del codice per una maggiore semplicitÃ  di lettura e compresione

@@ -90,6 +90,14 @@ namespace OSExercisesSolver {
                 e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
             }
 
+            private void parDimNTFS_KeyPress(object sender, KeyPressEventArgs e) {
+                e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
+            }
+
+            private void FileDimNTFS_KeyPress(object sender, KeyPressEventArgs e) {
+                e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
+            }
+
             
 
             // ####################################################################
@@ -302,7 +310,24 @@ namespace OSExercisesSolver {
             // ####################################
 
             private void dataTakeButtonNTFS_Click(object sender, EventArgs e) {
+                dimParTextBoxNTFS.Text = dimParTextBox.Text;
+                dataBlockComboNTFS.SelectedItem = dataBlockCombo.SelectedItem;
+                BRadioButtonNTFS.Checked = true;
 
+                SolveExt2fs SolveExt = new SolveExt2fs();
+                string selected;
+
+                if (KBRadioButton.Checked) {
+                    selected = "KB";
+                }
+
+                else {
+                    selected = "MB";
+                }
+
+                dimFileTextBoxNTFS.Text = SolveExt.MaxFileDimExt2fs(Convert.ToInt32(dimParTextBox.Text), Convert.ToInt32(dataBlockCombo.SelectedItem),
+                                                                    Convert.ToInt32(dimInodeTextBox.Text), selected, Convert.ToInt32(blockIndexTextBox.Text),
+                                                                    Convert.ToInt32(indrNumComboBox.SelectedItem)).ToString();
             }
 
 
@@ -312,7 +337,43 @@ namespace OSExercisesSolver {
 
             private void solveButtonNTFS_Click(object sender, EventArgs e) {
 
+                //Controlla che siano inseriti tutti i dati
+                bool validNTFS = validate.checkValidationNTFS(dimParTextBoxNTFS.Text, dataBlockComboNTFS.SelectedItem.ToString(), dimFileTextBoxNTFS.Text, BRadioButtonNTFS.Checked,
+                                                              KBRadioButtonNTFS.Checked, MBRadioButtonNTFS.Checked, GBRadioButtonNTFS.Checked, dimRecordTextBox.Text,
+                                                              reservedBytePrinNTFS.Text, reservedByteSecNTFS.Text);
+
+
+                // Se valido risolvi
+                if (validNTFS) {
+
+                    string selected = "";
+
+                    if (BRadioButtonNTFS.Checked) {
+                        selected = "B";
+                    }
+
+                    else if (KBRadioButtonNTFS.Checked) {
+                        selected = "KB";
+                    }
+
+                    else if (MBRadioButtonNTFS.Checked) {
+                        selected = "MB";
+                    }
+
+                    else if (GBRadioButtonNTFS.Checked) {
+                        selected = "GB";
+                    }
+
+                    SolveNTFS SNTFS = new SolveNTFS();
+
+                    SNTFS.Solve(Convert.ToInt32(dimParTextBoxNTFS.Text), Convert.ToInt32(dataBlockComboNTFS.SelectedItem), Convert.ToDouble(dimFileTextBoxNTFS.Text), selected,
+                                Convert.ToInt32(dimRecordTextBox.Text), Convert.ToInt32(reservedBytePrinNTFS.Text), Convert.ToInt32(reservedByteSecNTFS.Text));
+
+                }
+
             }
+
+            
             
 
 

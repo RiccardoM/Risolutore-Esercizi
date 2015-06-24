@@ -44,11 +44,12 @@ namespace CheckErrors {
         }
 
         // Controlla che siano inseriti tutti i dati negli esercizi NTFS
-        public bool checkValidationNTFS(string dimParTextBoxFat, string dataBlockComboFat, string dimFileTextBoxFat, bool BRadioButtonFat,
-                                        bool KBRadioButtonFat, bool MBRadioButtonFat, bool GBRadioButtonFat) {
+        public bool checkValidationNTFS(string dimParTextBoxNTFS, string dataBlockComboNTFS, string dimFileTextBoxNTFS, bool BRadioButtonNTFS, bool KBRadioButtonNTFS,
+                                        bool MBRadioButtonNTFS, bool GBRadioButtonNTFS, string dimRecordTextBox, string reservedBytePrinNTFS, string reservedByteSecNTFS) {
 
-            if (dimParTextBoxFat != "" && dimParTextBoxFat != "0" && dataBlockComboFat != "" && dataBlockComboFat != "0" && dimFileTextBoxFat != "" &&
-                (BRadioButtonFat || KBRadioButtonFat || MBRadioButtonFat || GBRadioButtonFat)) {
+            if (dimParTextBoxNTFS != "" && dimParTextBoxNTFS != "0" && dataBlockComboNTFS != "" && dataBlockComboNTFS != "0" && dimFileTextBoxNTFS != "" &&
+                (BRadioButtonNTFS || KBRadioButtonNTFS || MBRadioButtonNTFS || GBRadioButtonNTFS) && dimRecordTextBox != "" && dimRecordTextBox!="0" && 
+                reservedBytePrinNTFS!="" && reservedBytePrinNTFS!="0" && reservedByteSecNTFS!="" && reservedByteSecNTFS!="0") {
 
                 return true;
 

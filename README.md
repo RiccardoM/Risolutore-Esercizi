@@ -7,7 +7,6 @@ Creato da Riccardo Montagnin
 
 © Riccardo Montagnin - 2015
 
-
 ### Da fare
 #### In futuro
 + Riscrittura totale del codice per una maggiore semplicità di lettura e compresione

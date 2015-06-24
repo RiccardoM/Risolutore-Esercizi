@@ -120,15 +120,4 @@
   <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="Changelog.Text" xml:space="preserve">
-    <value>-- Changelog v. 1.0.4 --
-- Aggiunto menu per risolvere gli esercizi inerenti il File System FAT
-
--- Known Bugs --
-- Se non si riempie almeno un campo nel menu degli esercizi Ext2fs o FAT viene lanciata un'eccezione
-
-
-Realizzato da Riccardo Montagnin
-© 2015</value>
-  </data>
 </root>

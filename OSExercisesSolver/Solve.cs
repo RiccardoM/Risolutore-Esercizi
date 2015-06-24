@@ -302,12 +302,8 @@ namespace SolveExercises {
 
             string selected = selectedNTFS.ToString();
 
-            if (selected == "B") {
-                dimFileNTFS = dimFileNTFS;
 
-            }
-
-            else if (selected == "KB") {
+            if (selected == "KB") {
                 dimFileNTFS = dimFileNTFS * Math.Pow(2, 10);
             }
 

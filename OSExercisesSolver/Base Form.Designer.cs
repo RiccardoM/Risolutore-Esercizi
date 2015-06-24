@@ -23,7 +23,6 @@
         /// the contents of this method with the code editor.
         /// </summary>
         public void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Risolutore));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ext2fsFileSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -138,21 +137,21 @@
             // ext2fsToolStripMenuItem
             // 
             this.ext2fsToolStripMenuItem.Name = "ext2fsToolStripMenuItem";
-            this.ext2fsToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.ext2fsToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.ext2fsToolStripMenuItem.Text = "Ext2fs";
             this.ext2fsToolStripMenuItem.Click += new System.EventHandler(this.ext2fsToolStripMenuItem_Click);
             // 
             // FATToolStripMenuItem
             // 
             this.FATToolStripMenuItem.Name = "FATToolStripMenuItem";
-            this.FATToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.FATToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.FATToolStripMenuItem.Text = "FAT";
             this.FATToolStripMenuItem.Click += new System.EventHandler(this.FATToolStripMenuItem_Click);
             // 
             // nTFSToolStripMenuItem
             // 
             this.nTFSToolStripMenuItem.Name = "nTFSToolStripMenuItem";
-            this.nTFSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nTFSToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.nTFSToolStripMenuItem.Text = "NTFS";
             this.nTFSToolStripMenuItem.Click += new System.EventHandler(this.nTFSToolStripMenuItem_Click);
             // 
@@ -162,7 +161,9 @@
             this.Changelog.Name = "Changelog";
             this.Changelog.Size = new System.Drawing.Size(450, 300);
             this.Changelog.TabIndex = 2;
-            this.Changelog.Text = resources.GetString("Changelog.Text");
+            this.Changelog.Text = "Benvenuto nel programma per la generazione di dati casuali e la risoluzione di es" +
+    "ercizi riguardanti i File System Ext2fs, FAT e NTFS.\r\n\r\nRealizzato da Riccardo M" +
+    "ontagnin\r\n© 2015";
             // 
             // pannelloExt2fs
             // 

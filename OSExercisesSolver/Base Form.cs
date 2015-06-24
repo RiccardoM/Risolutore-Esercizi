@@ -146,27 +146,34 @@ namespace OSExercisesSolver {
             public void solveButton_Click(object sender, EventArgs e) {
 
                 //Controlla che siano inseriti tutti i dati
-                bool valid = validate.checkValidationExt2( dimParTextBox.Text, dataBlockCombo.SelectedItem.ToString(), dimInodeTextBox.Text, blockIndexTextBox.Text,
-                                                           indrNumComboBox.SelectedItem.ToString(), KBRadioButton.Checked, MBRadioButton.Checked );
+                try {
+                    bool valid = validate.checkValidationExt2(dimParTextBox.Text, dataBlockCombo.SelectedItem.ToString(), dimInodeTextBox.Text, blockIndexTextBox.Text,
+                                                               indrNumComboBox.SelectedItem.ToString(), KBRadioButton.Checked, MBRadioButton.Checked);
+                
+                    // Se valido risolvi
+                    if (valid) {
 
-                // Se valido risolvi
-                if (valid) {
+                        string selected;
 
-                    string selected;
+                        if(KBRadioButton.Checked){
+                            selected = "KB";
+                        }
 
-                    if(KBRadioButton.Checked){
-                        selected = "KB";
+                        else{
+                            selected = "MB";
+                        }
+
+                        SolveExt2fs SExt2fs = new SolveExt2fs();
+
+                        SExt2fs.Solve( Convert.ToInt32(dimParTextBox.Text), Convert.ToInt32(dataBlockCombo.SelectedItem), Convert.ToInt32(dimInodeTextBox.Text), selected,
+                                       Convert.ToInt32(blockIndexTextBox.Text), Convert.ToInt32(indrNumComboBox.SelectedItem) );
+
                     }
 
-                    else{
-                        selected = "MB";
-                    }
+                }
 
-                    SolveExt2fs SExt2fs = new SolveExt2fs();
-
-                    SExt2fs.Solve( Convert.ToInt32(dimParTextBox.Text), Convert.ToInt32(dataBlockCombo.SelectedItem), Convert.ToInt32(dimInodeTextBox.Text), selected,
-                                   Convert.ToInt32(blockIndexTextBox.Text), Convert.ToInt32(indrNumComboBox.SelectedItem) );
-
+                catch (NullReferenceException) {
+                    MessageBox.Show("Controlla di aver inserito correttamente tutti i dati", "Errore");
                 }
 
 
@@ -224,25 +231,33 @@ namespace OSExercisesSolver {
             // ####################################
 
             private void dataTakeButtonFat_Click(object sender, EventArgs e) {
-                dimParTextBoxFat.Text = dimParTextBox.Text;
-                dataBlockComboFat.SelectedItem = dataBlockCombo.SelectedItem;
-                BRadioButtonFat.Checked = true;
 
-                SolveExt2fs SolveExt = new SolveExt2fs();
-                string selected;
-
-                if (KBRadioButton.Checked) {
-                    selected = "KB";
-                }
-
-                else {
-                    selected = "MB";
-                }
-
-                dimFileTextBoxFat.Text = SolveExt.MaxFileDimExt2fs( Convert.ToInt32(dimParTextBox.Text), Convert.ToInt32(dataBlockCombo.SelectedItem),
-                                                                    Convert.ToInt32(dimInodeTextBox.Text), selected, Convert.ToInt32(blockIndexTextBox.Text),
-                                                                    Convert.ToInt32(indrNumComboBox.SelectedItem)).ToString();
+                try {
+                    dimParTextBoxFat.Text = dimParTextBox.Text;
+                    dataBlockComboFat.SelectedItem = dataBlockCombo.SelectedItem;
                     
+
+                    SolveExt2fs SolveExt = new SolveExt2fs();
+                    string selected;
+
+                    if (KBRadioButton.Checked) {
+                        selected = "KB";
+                    }
+
+                    else {
+                        selected = "MB";
+                    }
+
+                    dimFileTextBoxFat.Text = SolveExt.MaxFileDimExt2fs(Convert.ToInt32(dimParTextBox.Text), Convert.ToInt32(dataBlockCombo.SelectedItem),
+                                                                        Convert.ToInt32(dimInodeTextBox.Text), selected, Convert.ToInt32(blockIndexTextBox.Text),
+                                                                        Convert.ToInt32(indrNumComboBox.SelectedItem)).ToString();
+
+                    BRadioButtonFat.Checked = true;
+                }
+
+                catch (FormatException) {
+                    MessageBox.Show("Controlla di aver inserito correttamente tutti i dati nel pannello Ext2fs", "Errore");
+                }
                
             }
 
@@ -253,39 +268,45 @@ namespace OSExercisesSolver {
 
             public void solveButtonFat_Click(object sender, EventArgs e) {
 
+                try {
 
-                //Controlla che siano inseriti tutti i dati
-                bool validFat = validate.checkValidationFat ( dimParTextBoxFat.Text, dataBlockComboFat.SelectedItem.ToString(), dimFileTextBoxFat.Text, BRadioButtonFat.Checked,
-                                                              KBRadioButtonFat.Checked, MBRadioButtonFat.Checked, GBRadioButtonFat.Checked );
-                   
+                    //Controlla che siano inseriti tutti i dati
+                    bool validFat = validate.checkValidationFat(dimParTextBoxFat.Text, dataBlockComboFat.SelectedItem.ToString(), dimFileTextBoxFat.Text, BRadioButtonFat.Checked,
+                                                                  KBRadioButtonFat.Checked, MBRadioButtonFat.Checked, GBRadioButtonFat.Checked);
 
-                // Se valido risolvi
-                if (validFat) {
 
-                    string selected="";
+                    // Se valido risolvi
+                    if (validFat) {
 
-                    if (BRadioButtonFat.Checked) {
-                        selected = "B";
+                        string selected = "";
+
+                        if (BRadioButtonFat.Checked) {
+                            selected = "B";
+                        }
+
+                        else if (KBRadioButtonFat.Checked) {
+                            selected = "KB";
+                        }
+
+                        else if (MBRadioButtonFat.Checked) {
+                            selected = "MB";
+                        }
+
+                        else if (GBRadioButtonFat.Checked) {
+                            selected = "GB";
+                        }
+
+                        SolveFat SFat = new SolveFat();
+
+                        SFat.Solve(Convert.ToInt32(dimParTextBoxFat.Text), Convert.ToInt32(dataBlockComboFat.SelectedItem), Convert.ToDouble(dimFileTextBoxFat.Text), selected);
+
                     }
-
-                    else if (KBRadioButtonFat.Checked) {
-                        selected = "KB";
-                    }
-
-                    else if (MBRadioButtonFat.Checked){
-                        selected = "MB";
-                    }
-
-                    else if(GBRadioButtonFat.Checked){
-                        selected= "GB";
-                    }
-
-                    SolveFat SFat = new SolveFat();
-
-                    SFat.Solve(Convert.ToInt32(dimParTextBoxFat.Text), Convert.ToInt32(dataBlockComboFat.SelectedItem), Convert.ToDouble(dimFileTextBoxFat.Text), selected);
 
                 }
 
+                catch (NullReferenceException) {
+                    MessageBox.Show("Controlla di aver inserito correttamente tutti i dati", "Errore");
+                }
 
             }
 
@@ -294,7 +315,7 @@ namespace OSExercisesSolver {
 
 
             // ####################################################################
-            // #####################      ESERCIZIO FAT        ####################
+            // ####################      ESERCIZIO NTFS        ####################
             // ####################################################################
 
             // ####################################
@@ -302,6 +323,69 @@ namespace OSExercisesSolver {
             // ####################################
 
             private void randGenButtonNTFS_Click(object sender, EventArgs e) {
+                
+                // Genero dimensione partizione
+                Random rand = new Random();
+                dimParTextBoxNTFS.Text = Math.Pow(2, rand.Next(5, 10)).ToString();
+
+                // Genero dimensione blocco dati
+                dataBlockComboNTFS.SelectedIndex = rand.Next(0, 3);
+
+
+                int potFile = rand.Next(0, 39);
+
+
+                if (potFile < 10) {
+                    dimFileTextBoxNTFS.Text = (Math.Pow(2, potFile)).ToString();
+                    BRadioButtonNTFS.Checked = true;
+                }
+
+                else if (potFile > 10 && potFile < 20) {
+                    dimFileTextBoxNTFS.Text = (Math.Pow(2, (potFile - 10))).ToString();
+                    KBRadioButtonNTFS.Checked = true;
+
+                }
+
+                else if (potFile > 20 && potFile < 30) {
+                    dimFileTextBoxNTFS.Text = (Math.Pow(2, (potFile - 20))).ToString();
+                    MBRadioButtonNTFS.Checked = true;
+                }
+
+                else if (potFile > 30) {
+                    dimFileTextBoxNTFS.Text = (Math.Pow(2, (potFile - 30))).ToString();
+                    GBRadioButtonNTFS.Checked = true;
+                }
+
+                //Genero dimensione record
+                dimRecordTextBox.Text = Math.Pow(2, rand.Next(6, 10)).ToString();
+
+                //Calcolo spazio record principale
+                switch (dimRecordTextBox.Text) {
+                    case "64":
+                        reservedBytePrinNTFS.Text = "28";
+                        reservedByteSecNTFS.Text = "40";
+                        break;
+
+                    case "128":
+                        reservedBytePrinNTFS.Text = "58";
+                        reservedByteSecNTFS.Text = "100";
+                        break;
+
+                    case "256":
+                        reservedBytePrinNTFS.Text = "128";
+                        reservedByteSecNTFS.Text = "240";
+                        break;
+
+                    case "512":
+                        reservedBytePrinNTFS.Text = "208";
+                        reservedByteSecNTFS.Text = "400";
+                        break;
+
+                    case "1024":
+                        reservedBytePrinNTFS.Text = "458";
+                        reservedByteSecNTFS.Text = "900";
+                        break;
+                }
 
             }
 
@@ -310,24 +394,32 @@ namespace OSExercisesSolver {
             // ####################################
 
             private void dataTakeButtonNTFS_Click(object sender, EventArgs e) {
-                dimParTextBoxNTFS.Text = dimParTextBox.Text;
-                dataBlockComboNTFS.SelectedItem = dataBlockCombo.SelectedItem;
-                BRadioButtonNTFS.Checked = true;
 
-                SolveExt2fs SolveExt = new SolveExt2fs();
-                string selected;
+                try {
+                    dimParTextBoxNTFS.Text = dimParTextBox.Text;
+                    dataBlockComboNTFS.SelectedItem = dataBlockCombo.SelectedItem;
+                    
+                    SolveExt2fs SolveExt = new SolveExt2fs();
+                    string selected;
 
-                if (KBRadioButton.Checked) {
-                    selected = "KB";
+                    if (KBRadioButton.Checked) {
+                        selected = "KB";
+                    }
+
+                    else {
+                        selected = "MB";
+                    }
+
+                    dimFileTextBoxNTFS.Text = SolveExt.MaxFileDimExt2fs(Convert.ToInt32(dimParTextBox.Text), Convert.ToInt32(dataBlockCombo.SelectedItem),
+                                                                        Convert.ToInt32(dimInodeTextBox.Text), selected, Convert.ToInt32(blockIndexTextBox.Text),
+                                                                        Convert.ToInt32(indrNumComboBox.SelectedItem)).ToString();
+
+                    BRadioButtonNTFS.Checked = true;
                 }
 
-                else {
-                    selected = "MB";
+                catch (FormatException) {
+                    MessageBox.Show("Controlla di aver inserito correttamente tutti i dati nel pannello Ext2fs", "Errore");
                 }
-
-                dimFileTextBoxNTFS.Text = SolveExt.MaxFileDimExt2fs(Convert.ToInt32(dimParTextBox.Text), Convert.ToInt32(dataBlockCombo.SelectedItem),
-                                                                    Convert.ToInt32(dimInodeTextBox.Text), selected, Convert.ToInt32(blockIndexTextBox.Text),
-                                                                    Convert.ToInt32(indrNumComboBox.SelectedItem)).ToString();
             }
 
 
@@ -337,38 +429,45 @@ namespace OSExercisesSolver {
 
             private void solveButtonNTFS_Click(object sender, EventArgs e) {
 
-                //Controlla che siano inseriti tutti i dati
-                bool validNTFS = validate.checkValidationNTFS(dimParTextBoxNTFS.Text, dataBlockComboNTFS.SelectedItem.ToString(), dimFileTextBoxNTFS.Text, BRadioButtonNTFS.Checked,
-                                                              KBRadioButtonNTFS.Checked, MBRadioButtonNTFS.Checked, GBRadioButtonNTFS.Checked, dimRecordTextBox.Text,
-                                                              reservedBytePrinNTFS.Text, reservedByteSecNTFS.Text);
+                try {
+                    //Controlla che siano inseriti tutti i dati
+                    bool validNTFS = validate.checkValidationNTFS(dimParTextBoxNTFS.Text, dataBlockComboNTFS.SelectedItem.ToString(), dimFileTextBoxNTFS.Text, BRadioButtonNTFS.Checked,
+                                                                  KBRadioButtonNTFS.Checked, MBRadioButtonNTFS.Checked, GBRadioButtonNTFS.Checked, dimRecordTextBox.Text,
+                                                                  reservedBytePrinNTFS.Text, reservedByteSecNTFS.Text);
 
 
-                // Se valido risolvi
-                if (validNTFS) {
+                    // Se valido risolvi
+                    if (validNTFS) {
 
-                    string selected = "";
+                        string selected = "";
 
-                    if (BRadioButtonNTFS.Checked) {
-                        selected = "B";
+                        if (BRadioButtonNTFS.Checked) {
+                            selected = "B";
+                        }
+
+                        else if (KBRadioButtonNTFS.Checked) {
+                            selected = "KB";
+                        }
+
+                        else if (MBRadioButtonNTFS.Checked) {
+                            selected = "MB";
+                        }
+
+                        else if (GBRadioButtonNTFS.Checked) {
+                            selected = "GB";
+                        }
+
+                        SolveNTFS SNTFS = new SolveNTFS();
+
+                        SNTFS.Solve(Convert.ToInt32(dimParTextBoxNTFS.Text), Convert.ToInt32(dataBlockComboNTFS.SelectedItem), Convert.ToDouble(dimFileTextBoxNTFS.Text), selected,
+                                    Convert.ToInt32(dimRecordTextBox.Text), Convert.ToInt32(reservedBytePrinNTFS.Text), Convert.ToInt32(reservedByteSecNTFS.Text));
+
                     }
 
-                    else if (KBRadioButtonNTFS.Checked) {
-                        selected = "KB";
-                    }
+                }
 
-                    else if (MBRadioButtonNTFS.Checked) {
-                        selected = "MB";
-                    }
-
-                    else if (GBRadioButtonNTFS.Checked) {
-                        selected = "GB";
-                    }
-
-                    SolveNTFS SNTFS = new SolveNTFS();
-
-                    SNTFS.Solve(Convert.ToInt32(dimParTextBoxNTFS.Text), Convert.ToInt32(dataBlockComboNTFS.SelectedItem), Convert.ToDouble(dimFileTextBoxNTFS.Text), selected,
-                                Convert.ToInt32(dimRecordTextBox.Text), Convert.ToInt32(reservedBytePrinNTFS.Text), Convert.ToInt32(reservedByteSecNTFS.Text));
-
+                catch (NullReferenceException nullExep) {
+                    MessageBox.Show("Controlla di aver inserito correttamente tutti i dati", "Errore");
                 }
 
             }

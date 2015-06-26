@@ -9,4 +9,4 @@ Creato da Riccardo Montagnin
 
 ### Da fare
 #### In futuro
-+ Riscrittura totale del codice per una maggiore semplicità di lettura e compresione
++ Riscrittura totale del codice per una maggiore semplicità di lettura e compresione 

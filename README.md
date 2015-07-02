@@ -1,6 +1,6 @@
 ### Informazioni generali
 
-##### La versione 2.0 di questa applicazione è in sviluppo all'interno di [questa repo](https://github.com/RiccardoM/Risolutore-Esercizi-2.0).
+##### La versione 2.0 di questa applicazione è disponibile in [questa repo](https://github.com/RiccardoM/Risolutore-Esercizi-2.0).
 
 Questa piccola applicazione permette di risolvere, oltre che generare dati casuali, gli esercizi inerenti i File System Ext2fs, FAT ed NTFS che vengono trattati nel corso di Sistemi
 Operativi dell'Università di Informatica dell'Ateneo di Padova.
